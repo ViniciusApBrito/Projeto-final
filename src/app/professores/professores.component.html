@@ -1,0 +1,29 @@
+<div class="bg-dark mt-5 container rounded-4 p-5 dracula-dark-theme">
+    <app-professores-forms [Professores]="professores" (saveEvent)="onSaveEvent($event)" (cleanEvent)="onCleanEvent()"></app-professores-forms>
+  
+    <table class="table table-dark mt-3">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Email</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Endereço</th>
+          <th scope="col">Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let professor of Professores">
+          <th scope="row">{{ professor.id }}</th>
+          <td>{{ professor.name }}</td>
+          <td>{{ professor.email }}</td>
+          <td>{{ professor.cpf }}</td>
+          <td>{{ professor.location }}</td>
+          <td>
+            <button class="btn btn-warning me-2" (click)="edit(professor)">Editar</button>
+            <button class="btn btn-danger" (click)="delete(professor)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

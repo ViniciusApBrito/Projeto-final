@@ -1,0 +1,13 @@
+{
+  "professores": [],
+  "alunos": [
+    {
+      "id": 1,
+      "name": "Clovis",
+      "idade": 15,
+      "cpf": "5432289912",
+      "location": "São Paulo",
+      "status": true
+    }
+  ]
+}

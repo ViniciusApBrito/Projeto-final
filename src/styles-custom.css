@@ -1,0 +1,66 @@
+:root {
+  --primary-color: #bd93f9;
+  --secondary-color: #f8f8f2;
+  --text-color: #f8f8f2;
+  --table-header-color: #6272a4;
+
+  --table-row-color: #44475a;
+  --button-color: #bd93f9;
+}
+
+.btn-primary {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+}
+
+.btn-primary:hover {
+  background-color: #9d86e9;
+  border-color: #9d86e9;
+}
+
+.btn-danger {
+  background-color: #ff5555;
+
+  border-color: #ff5555;
+}
+
+.btn-danger:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+
+.table-dark {
+  color: var(--text-color);
+}
+
+.table-dark th {
+  background-color: var(--table-header-color);
+}
+
+.table-dark td {
+  background-color: var(--table-row-color);
+}
+
+
+.dracula-dark-theme {
+  color: #f8f8f2;
+}
+
+.dracula-dark-theme table {
+  color: #f8f8f2;
+}
+
+.dracula-dark-theme th,
+.dracula-dark-theme td {
+  border-color: #6272a4;
+}
+
+.dracula-dark-theme .btn {
+  color: #f8f8f2;
+  background-color: #6272a4;
+}
+
+.dracula-dark-theme .btn:hover {
+  background-color: #bd93f9;
+}
