@@ -28,8 +28,8 @@ export class AlunosComponent implements OnInit {
     this.router.navigate(['alunosDetails', aluno.id]);
   }
 
-  delete(Alunos: alunos) {
-    this.alunosService.delete(Alunos).subscribe({
+  delete(aluno: alunos) {
+    this.alunosService.delete(aluno).subscribe({
       next: () => this.loadAlunos(),
     })
   }

@@ -62,7 +62,7 @@ export class AlunosFormsComponent {
   }
 
   cancel() {
-    this.router.navigate(['studants']);
+    this.router.navigate(['alunos']);
   }
   get name(): any {
     return this.formGroupAlunos.get('name');
