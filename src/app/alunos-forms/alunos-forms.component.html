@@ -1,25 +1,26 @@
-
-<div class="bg-dark mt-5 container rounded-4 p-5">
+<div style="background-color: #151226; min-height: 100vh;">
+    <div class="mt-5 container display-7 rounded-4 p-5" style="background-color: #73204E">
     <div class="row">
       <div class="display-7 text-center text-white">
         <h3 class="mb-4">Cadastro de alunos</h3>
         <form [formGroup]="formGroupAlunos">
           <div class="mb-3">
             <label for="name" class="form-label">Nome</label>
-            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome"/>
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome" />
             <div *ngIf="submitted && name.invalid">
               <small class="text-danger">NOME INVÁLIDO!</small>
             </div>
           </div>
-  
+
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Digite seu email" />
+            <input type="email" formControlName="email" class="form-control" id="email"
+              placeholder="Digite seu email" />
             <div *ngIf="submitted && email.invalid">
               <small class="text-danger">EMAIL INVÁLIDO!</small>
             </div>
           </div>
-  
+
           <div class="mb-3">
             <label for="location" class="form-label">Cidade</label>
             <select formControlName="location" class="form-control" id="location">
@@ -41,26 +42,27 @@
               <option value="Jundiaí">Jundiaí</option>
             </select>
           </div>
-  
+
           <div class="mb-3">
-            <label for="cpf" class="form-label">CPF</label>
+            <label for="cpf" class="form-labe l">CPF</label>
             <input type="text" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF" />
             <div *ngIf="submitted && cpf.invalid">
               <small class="text-danger">CPF INVÁLIDO!</small>
             </div>
           </div>
-  
+
           <div class="form-check text-start">
             <input class="form-check-input" type="checkbox" formControlName="status" id="flexCheckDefault" />
             <label class="form-check-label text-white" for="flexCheckDefault">
               Passou de ano
             </label>
           </div>
-          <div>
-            <button class="btn btn-primary m-3" (click)="save()">Salvar</button>
-            <button class="btn btn-primary" (click)="cancel()">Cancelar</button>
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button class="btn btn-success" style= color:white; (click)="save()">Salvar</button>
+            <button class="btn btn-danger" style= color:white; (click)="cancel()">Cancelar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+</div>
