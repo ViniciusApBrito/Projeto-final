@@ -1,12 +1,50 @@
 {
-  "professores": [],
+  "professores": [
+    {
+      "id": 1,
+      "name": "Julia",
+      "email": "Games@gmail.com",
+      "cpf": "122.456.678.91",
+      "location": "Ribeirão Preto"
+    },
+    {
+      "id": 2,
+      "name": "Adamastor",
+      "email": "Adamastro@gmail.com",
+      "cpf": "124.456.745.90",
+      "location": "Mauá"
+    },
+    {
+      "id": 3,
+      "name": "Cleber",
+      "email": "cleberiano@gmail.com",
+      "cpf": "421.123.453.06",
+      "location": "Mauá"
+    }
+  ],
   "alunos": [
     {
       "id": 1,
-      "name": "Clovis",
-      "idade": 15,
-      "cpf": "5432289912",
-      "location": "São Paulo",
+      "name": "Vinicius ",
+      "email": "vinicius.brito@gmail.com",
+      "location": "Ribeirão Preto",
+      "cpf": "999.999.999.99",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Wallace",
+      "email": "wallace@gmai.com",
+      "location": "São Bernardo do Campo",
+      "cpf": "123.468.896.78",
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Ribamar",
+      "email": "temgou@hotmail.com",
+      "location": "Santo André",
+      "cpf": "213.892.031.28",
       "status": true
     }
   ]

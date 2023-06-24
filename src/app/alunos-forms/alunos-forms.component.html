@@ -1,1 +1,66 @@
-<p>alunos-forms works!</p>
+
+<div class="bg-dark mt-5 container rounded-4 p-5">
+    <div class="row">
+      <div class="display-7 text-center text-white">
+        <h3 class="mb-4">Cadastro de alunos</h3>
+        <form [formGroup]="formGroupAlunos">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome" />
+            <div *ngIf="submitted && name.invalid">
+              <small class="text-danger">NOME INVÁLIDO!</small>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Digite seu email" />
+            <div *ngIf="submitted && email.invalid">
+              <small class="text-danger">EMAIL INVÁLIDO!</small>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="location" class="form-label">Cidade</label>
+            <select formControlName="location" class="form-control" id="location">
+              <option value="">Selecione uma cidade</option>
+              <option value="São Paulo">São Paulo</option>
+              <option value="Guarulhos">Guarulhos</option>
+              <option value="Campinas">Campinas</option>
+              <option value="São Bernardo do Campo">São Bernardo do Campo</option>
+              <option value="Santo André">Santo André</option>
+              <option value="Osasco">Osasco</option>
+              <option value="São José dos Campos">São José dos Campos</option>
+              <option value="Ribeirão Preto">Ribeirão Preto</option>
+              <option value="Sorocaba">Sorocaba</option>
+              <option value="Santos">Santos</option>
+              <option value="Mauá">Mauá</option>
+              <option value="São José do Rio Preto">São José do Rio Preto</option>
+              <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+              <option value="Diadema">Diadema</option>
+              <option value="Jundiaí">Jundiaí</option>
+            </select>
+          </div>
+  
+          <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF" />
+            <div *ngIf="submitted && cpf.invalid">
+              <small class="text-danger">CPF INVÁLIDO!</small>
+            </div>
+          </div>
+  
+          <div class="form-check text-start">
+            <input class="form-check-input" type="checkbox" formControlName="status" id="flexCheckDefault" />
+            <label class="form-check-label text-white" for="flexCheckDefault">
+              Passou de ano
+            </label>
+          </div>
+          <div>
+            <button class="btn btn-primary m-3" (click)="save()">Salvar</button>
+            <button class="btn btn-primary" (click)="cancel()">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

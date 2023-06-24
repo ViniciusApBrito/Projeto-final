@@ -12,6 +12,7 @@ import { AlunosComponent } from './alunos/alunos.component';
 import { AlunosFormsComponent } from './alunos-forms/alunos-forms.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SimNaoPipe } from './sim-nao.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProfessoresComponent,
     ProfessoresFormsComponent,
     AlunosComponent,
-    AlunosFormsComponent
+    AlunosFormsComponent,
+    SimNaoPipe
   ],
   imports: [
     BrowserModule,

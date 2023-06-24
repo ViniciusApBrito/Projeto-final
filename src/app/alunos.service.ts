@@ -6,25 +6,28 @@ import { alunos } from './alunos';
 @Injectable({
   providedIn: 'root'
 })
-export class AlunosService {url = 'http://localhost:3000/alunos';
+export class AlunosService {
+  url = 'http://localhost:3000/alunos';
 
-constructor(private http: HttpClient) {}
-getAlunos(): Observable<alunos[]> {
-  return this.http.get<alunos[]>(this.url);
-}
-getsAlunos(id: number): Observable<alunos> {
-  return this.http.get<alunos>(`${this.url}/${id}`);
-}
+  constructor(private http: HttpClient) {}
 
-save(alunos: alunos): Observable<alunos> {
-  return this.http.post<alunos>(this.url, alunos);
-}
+  getAlunos(): Observable<alunos[]> {
+    return this.http.get<alunos[]>(this.url);
+  }
 
-edit(alunos: alunos): Observable<alunos> {
-  return this.http.put<alunos>(`${this.url}/${alunos.id}`, alunos);
-}
+  getAlunosId(id: number): Observable<alunos> {
+    return this.http.get<alunos>(`${this.url}/${id}`);
+  }
 
-delete(alunos: alunos): Observable<void> {
-  return this.http.delete<void>(`${this.url}/${alunos.id}`);
-}
+  save(alunos: alunos): Observable<alunos> {
+    return this.http.post<alunos>(this.url, alunos);
+  }
+
+  edit(alunos: alunos): Observable<alunos> {
+    return this.http.put<alunos>(`${this.url}/${alunos.id}`, alunos);
+  }
+
+  delete(alunos: alunos): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${alunos.id}`);
+  }
 }
